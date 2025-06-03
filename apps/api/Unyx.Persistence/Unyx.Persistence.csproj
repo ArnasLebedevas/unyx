@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Unyx.Application\Unyx.Application.csproj" />
+    <ProjectReference Include="..\Unyx.Domain\Unyx.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
