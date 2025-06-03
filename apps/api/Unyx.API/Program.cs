@@ -1,4 +1,7 @@
 using Unyx.API.Middlewares;
+using Unyx.Application.Registrations;
+using Unyx.Persistence.Registrations;
+using Unyx.Infrastructure.Registrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +12,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+builder.Services
+    .AddApplication()
+    .AddPersistence(builder.Configuration)
+    .AddInfrastructure(builder.Configuration);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

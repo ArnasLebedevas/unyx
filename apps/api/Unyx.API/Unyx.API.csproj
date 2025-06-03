@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Unyx.Application\Unyx.Application.csproj" />
+    <ProjectReference Include="..\Unyx.Infrastructure\Unyx.Infrastructure.csproj" />
+    <ProjectReference Include="..\Unyx.Persistence\Unyx.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
