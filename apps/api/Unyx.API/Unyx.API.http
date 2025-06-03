@@ -1,6 +1,0 @@
-@Unyx.API_HostAddress = http://localhost:5222
-
-GET {{Unyx.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
