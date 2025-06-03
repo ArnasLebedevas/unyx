@@ -1,7 +1,7 @@
 ﻿using Unyx.Application.Persistence;
 using Unyx.Application.Persistence.Write;
 using Unyx.Domain.Entities;
-using Unyx.Persistence.Persistence.Repositories.Write;
+using Unyx.Persistence.Repositories.Write;
 
 namespace Unyx.Persistence.Repositories;
 

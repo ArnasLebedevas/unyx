@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
+using Unyx.Domain.Entities;
 
-namespace Unyx.Persistence.Configurations
+namespace Unyx.Persistence.Configurations;
+
+internal sealed class UsernameConfiguration : IEntityTypeConfiguration<Username>
 {
-    internal class UsernameConfiguration
+    public void Configure(EntityTypeBuilder<Username> builder)
     {
+        builder.HasKey(ec => ec.Id);
     }
 }

@@ -6,17 +6,15 @@ using Unyx.Infrastructure.Registrations;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
-
-var app = builder.Build();
-
 builder.Services
     .AddApplication()
     .AddPersistence(builder.Configuration)
     .AddInfrastructure(builder.Configuration);
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -4,7 +4,4 @@ public enum AuthProvider
 {
     Local,
     Google,
-    Discord,
-    Twitch,
-    Twitter
 }
