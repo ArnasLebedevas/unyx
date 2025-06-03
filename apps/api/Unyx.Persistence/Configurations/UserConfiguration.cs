@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using Unyx.Domain.Entities;
+using Unyx.Domain.Enums;
 
 namespace Unyx.Persistence.Configurations;
 
@@ -11,19 +12,29 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasKey(ec => ec.Id);
 
         builder.Property(u => u.Email)
-              .HasMaxLength(256);
-
-        builder.Property(u => u.PhoneNumber)
-            .HasMaxLength(32);
+            .HasMaxLength(256)
+            .IsRequired();
 
         builder.Property(u => u.PasswordHash)
-            .HasMaxLength(512);
+            .HasMaxLength(512)
+            .IsRequired();
+
+        builder.Property(x => x.Subscription)
+           .HasConversion<string>()
+           .HasDefaultValue(Subscription.Free);
+
+        builder.Property(x => x.AuthProvider)
+           .HasConversion<string>()
+           .HasDefaultValue(AuthProvider.Local);
 
         builder.Property(u => u.AvatarUrl)
             .HasMaxLength(512);
 
         builder.Property(u => u.VerificationCode)
             .HasMaxLength(10);
+
+        builder.Property(u => u.IsEmailVerified)
+            .HasDefaultValue(false);
 
         builder.Property(u => u.IsDeleted)
             .HasDefaultValue(false);
@@ -34,8 +45,8 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(u => u.CreatedAt)
             .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-        builder.HasIndex(u => u.Email).IsUnique();
-        builder.HasIndex(u => u.PhoneNumber).IsUnique();
+        builder.HasIndex(u => u.Email)
+            .IsUnique();
 
         builder.HasMany(u => u.Usernames)
             .WithOne()

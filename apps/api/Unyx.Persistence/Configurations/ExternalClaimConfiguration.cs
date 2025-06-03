@@ -34,20 +34,17 @@ internal sealed class ExternalClaimConfiguration : IEntityTypeConfiguration<Exte
 
         builder.Property(ec => ec.Status)
             .HasDefaultValue(ClaimStatus.Pending)
-            .HasConversion<string>();
+            .HasConversion<int>();
 
         builder.Property(ec => ec.ProofReferenceType)
-            .HasDefaultValue(ProofReferenceType.Url)
-            .HasConversion<string>();
+            .HasDefaultValue(ProofReferenceType.None)
+            .HasConversion<int>();
 
         builder.Property(ec => ec.VerifiedBySystem)
             .HasDefaultValue(false);
 
         builder.Property(ec => ec.ClaimedAt)
             .HasDefaultValueSql("CURRENT_TIMESTAMP");
-
-        builder.Property(ec => ec.VerifiedAt)
-            .IsRequired(false);
 
         builder.HasOne(ec => ec.User)
             .WithMany(u => u.LinkedAccounts)

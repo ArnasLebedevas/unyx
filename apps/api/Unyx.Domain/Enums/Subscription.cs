@@ -1,6 +1,6 @@
 ﻿namespace Unyx.Domain.Enums;
 
-public enum SubscriptionPlan
+public enum Subscription
 {
     Free,
     Pro,

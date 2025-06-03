@@ -4,19 +4,15 @@ namespace Unyx.Domain.Entities;
 
 public class User : BaseEntity
 {
-    public string? Email { get; set; }
-    public string? PasswordHash { get; set; }
-
-    public string? PhoneNumber { get; set; }
-    public bool IsPhoneVerified { get; set; }
+    public required string Email { get; set; }
+    public required string PasswordHash { get; set; }
 
     public AuthProvider AuthProvider { get; set; }
     public string? AuthProviderId { get; set; }
 
     public string? AvatarUrl { get; set; }
 
-    public SubscriptionPlan SubscriptionPlan { get; set; }
-    public VerificationStatus VerificationStatus { get; set; }
+    public Subscription Subscription { get; set; }
 
     public bool IsEmailVerified { get; set; }
     public string? VerificationCode { get; set; }
@@ -26,8 +22,8 @@ public class User : BaseEntity
     public DateTime? VerifiedAt { get; set; }
     public DateTime? LastLoginAt { get; set; }
 
-    public bool IsDeleted { get; set; } = false;
-    public bool IsBanned { get; set; } = false;
+    public bool IsDeleted { get; set; }
+    public bool IsBanned { get; set; }
 
     public List<Username> Usernames { get; set; } = [];
     public List<ExternalClaim> LinkedAccounts { get; set; } = [];
