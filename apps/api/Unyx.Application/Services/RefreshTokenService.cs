@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Unyx.Persistence.Repositories.Write
+namespace Unyx.Application.Services;
+
+internal class RefreshTokenService
 {
-    internal class UserWriteRepository
-    {
-    }
 }

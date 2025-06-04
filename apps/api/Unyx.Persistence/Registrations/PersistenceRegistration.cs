@@ -5,6 +5,8 @@ namespace Unyx.Persistence.Registrations;
 
 public static class PersistenceRegistration
 {
-    public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration) =>
-        services.AddDatabase(configuration);
+    public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration) => 
+        services
+               .AddDatabase(configuration)
+               .AddRepositories();
 }

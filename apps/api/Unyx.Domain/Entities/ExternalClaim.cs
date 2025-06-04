@@ -11,7 +11,6 @@ public class ExternalClaim : BaseEntity
     public ClaimStatus Status { get; set; }
     public ProofReferenceType ProofReferenceType { get; set; }
 
-    public bool VerifiedBySystem { get; set; }
     public required string ProofReference { get; set; }
 
     public string? Note { get; set; }

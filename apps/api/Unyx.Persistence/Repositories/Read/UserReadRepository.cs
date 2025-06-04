@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Unyx.Application.Persistence.Read;
+using Unyx.Domain.Entities;
 
-namespace Unyx.Persistence.Repositories.Read
+namespace Unyx.Persistence.Repositories.Read;
+
+public class UserReadRepository(UnyxDbContext context) : ReadRepository<User>(context), IUserReadRepository
 {
-    internal class UserReadRepository
-    {
-    }
+    public async Task<User?> GetUserByEmailAsync(string email) => await context.Set<User>().FirstOrDefaultAsync(user => user.Email == email);
 }

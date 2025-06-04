@@ -40,9 +40,6 @@ internal sealed class ExternalClaimConfiguration : IEntityTypeConfiguration<Exte
             .HasDefaultValue(ProofReferenceType.None)
             .HasConversion<int>();
 
-        builder.Property(ec => ec.VerifiedBySystem)
-            .HasDefaultValue(false);
-
         builder.Property(ec => ec.ClaimedAt)
             .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
