@@ -9,5 +9,6 @@ public static class InfrastructureRegistration
         services
                .AddCorsConfiguration(configuration)
                .AddConfigSettings(configuration)
-               .AddAuthServices(configuration);
+               .AddAuthServices(configuration)
+               .AddServices();
 }

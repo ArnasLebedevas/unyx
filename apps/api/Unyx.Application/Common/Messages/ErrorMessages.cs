@@ -3,5 +3,7 @@
 public static class ErrorMessages
 {
     public const string ValidationFailed = "Validation failed.";
+    public const string InvalidCredentials = "Invalid email or password.";
     public const string MissingJWT = "JWT Secret is missing in configuration.";
+    public const string MissingRefreshTokenForUser = "No refresh token found for user with ID '{0}'.";
 }

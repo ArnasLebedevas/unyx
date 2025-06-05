@@ -10,9 +10,11 @@ public class Result<T>(bool success, T? data, AppError? error, ErrorType errorTy
     public ErrorType ErrorType { get; } = errorType;
     public Dictionary<string, string[]>? ValidationErrors { get; } = validationErrors;
 
-    public static Result<T> SuccessResult(T data) => new(true, data, null, ErrorType.None, null);
+    public static Result<T> SuccessResult(T data) =>
+        new(true, data, null, ErrorType.None, null);
 
-    public static Result<T> FailureResult(AppError error, ErrorType errorType = ErrorType.Business) => new(false, default, error, errorType, null);
+    public static Result<T> FailureResult(AppError error, ErrorType errorType = ErrorType.Business, Dictionary<string, string[]>? validationErrors = null) =>
+        new(false, default, error, errorType, validationErrors);
 
     public static implicit operator Result<T>(T data) => SuccessResult(data);
 
