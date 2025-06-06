@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using Unyx.Application.Common.DTOs;
+using Unyx.Application.Features.Auth.DTOs;
 using Unyx.Domain.Entities;
 
 namespace Unyx.Application.Features.Auth.SignUp;
 
-public class SignUpMapping : Profile
+public class SignUpMapper : Profile
 {
-    public SignUpMapping()
+    public SignUpMapper()
     {
         CreateMap<User, AuthResponseDto>();
         CreateMap<CreateUserDto, User>();

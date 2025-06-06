@@ -7,7 +7,7 @@ public static class MappingRegistration
 {
     public static IServiceCollection AddMappingServices(this IServiceCollection services)
     {
-        services.AddAutoMapper(typeof(SignUpMapping));
+        services.AddAutoMapper(typeof(SignUpMapper));
 
         return services;
     }

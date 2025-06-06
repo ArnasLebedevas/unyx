@@ -9,6 +9,7 @@ public static class ConfigRegistration
     public static IServiceCollection AddConfigSettings(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
+        services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
 
         return services;
     }

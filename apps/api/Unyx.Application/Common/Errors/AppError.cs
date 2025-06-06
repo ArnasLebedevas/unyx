@@ -9,5 +9,6 @@ public sealed class AppError(ErrorType code, string message)
     public static AppError NotFound(string entity) => new(ErrorType.NotFound, $"{entity} was not found.");
     public static AppError Validation(string message) => new(ErrorType.Validation, message);
     public static AppError Conflict(string message) => new(ErrorType.Conflict, message);
+    public static AppError Email(string message) => new(ErrorType.Email, message);
     public static AppError Unauthorized => new(ErrorType.Unauthorized, "Access denied.");
 }

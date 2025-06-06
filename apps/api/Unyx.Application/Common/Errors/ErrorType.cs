@@ -8,5 +8,6 @@ public enum ErrorType
     NotFound,
     Unauthorized,
     Conflict,
-    System
+    System,
+    Email
 }

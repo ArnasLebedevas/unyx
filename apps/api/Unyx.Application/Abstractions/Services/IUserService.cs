@@ -1,4 +1,4 @@
-﻿using Unyx.Application.Common.DTOs;
+﻿using Unyx.Application.Features.Auth.DTOs;
 using Unyx.Domain.Entities;
 
 namespace Unyx.Application.Abstractions.Services;

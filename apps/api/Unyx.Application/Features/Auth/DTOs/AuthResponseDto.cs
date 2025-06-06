@@ -1,4 +1,4 @@
-﻿namespace Unyx.Application.Common.DTOs;
+﻿namespace Unyx.Application.Features.Auth.DTOs;
 
 public class AuthResponseDto
 {

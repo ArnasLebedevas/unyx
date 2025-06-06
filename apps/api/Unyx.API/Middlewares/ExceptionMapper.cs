@@ -26,6 +26,10 @@ public static class ExceptionMapper
                 StatusCodes.Status404NotFound,
                 Result<object>.FailureResult(AppError.NotFound(notFoundEx.Message), ErrorType.NotFound)
             ),
+            EmailSendFailureException emailEx => (
+               StatusCodes.Status502BadGateway,
+               Result<object>.FailureResult(AppError.Email(emailEx.Message), ErrorType.Email)
+           ),
             _ => (
                 StatusCodes.Status500InternalServerError,
                 Result<object>.FailureResult(AppError.System, ErrorType.System)

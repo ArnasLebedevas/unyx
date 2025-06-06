@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Unyx.Application.Abstractions.Security;
 using Unyx.Application.Abstractions.Services;
-using Unyx.Application.Common.DTOs;
+using Unyx.Application.Features.Auth.DTOs;
 using Unyx.Application.Persistence.Read;
 using Unyx.Domain.Entities;
 

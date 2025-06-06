@@ -1,11 +1,11 @@
 ﻿using Unyx.Application.Abstractions.CQRS;
 using Unyx.Application.Abstractions.Services;
-using Unyx.Application.Common.DTOs;
 using Unyx.Application.Common;
 using Unyx.Application.Persistence;
 using Unyx.Application.Common.Errors;
 using Unyx.Application.Abstractions.Security;
 using Unyx.Application.Common.Messages;
+using Unyx.Application.Features.Auth.DTOs;
 
 namespace Unyx.Application.Features.Auth.SignIn;
 
