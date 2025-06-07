@@ -19,18 +19,14 @@ public class ExceptionHandlingMiddleware(RequestDelegate next, ILogger<Exception
         catch (Exception ex)
         {
             logger.LogError(ex, "Unhandled exception: {Message}", ex.Message);
-            await HandleExceptionAsync(context, ex);
+
+            var (statusCode, result) = ExceptionMapper.Map(ex);
+
+            context.Response.ContentType = "application/json";
+            context.Response.StatusCode = statusCode;
+
+            var json = JsonSerializer.Serialize(result, CachedJsonSerializerOptions);
+            await context.Response.WriteAsync(json);
         }
-    }
-
-    private static Task HandleExceptionAsync(HttpContext context, Exception exception)
-    {
-        var (statusCode, result) = ExceptionMapper.Map(exception);
-
-        context.Response.ContentType = "application/json";
-        context.Response.StatusCode = statusCode;
-
-        var json = JsonSerializer.Serialize(result, CachedJsonSerializerOptions);
-        return context.Response.WriteAsync(json);
     }
 }
