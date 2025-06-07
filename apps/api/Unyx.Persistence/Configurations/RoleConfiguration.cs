@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using Unyx.Domain.Entities;
-using Unyx.Domain.Enums;
 
 namespace Unyx.Persistence.Configurations;
 
@@ -20,10 +19,5 @@ internal sealed class RoleConfiguration : IEntityTypeConfiguration<Role>
         builder.HasMany(r => r.Users)
             .WithOne(u => u.Role)
             .HasForeignKey(u => u.RoleId);
-
-        builder.HasData(
-            new Role { Id = Guid.NewGuid(), RoleType = RoleType.User },
-            new Role { Id = Guid.NewGuid(), RoleType = RoleType.Admin }
-        );
     }
 }

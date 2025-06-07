@@ -2,6 +2,7 @@ using Unyx.API.Middlewares;
 using Unyx.Application.Registrations;
 using Unyx.Persistence.Registrations;
 using Unyx.Infrastructure.Registrations;
+using Unyx.Persistence.Seeders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,5 +30,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+
+await UnyxDbInitializer.InitializeAsync(app.Services);
 
 app.Run();
