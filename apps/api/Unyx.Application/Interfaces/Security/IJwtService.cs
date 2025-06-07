@@ -1,6 +1,6 @@
 ﻿using Unyx.Domain.Entities;
 
-namespace Unyx.Application.Abstractions.Security;
+namespace Unyx.Application.Interfaces.Security;
 
 public interface IJwtService
 {

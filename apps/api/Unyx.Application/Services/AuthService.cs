@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
-using Unyx.Application.Abstractions.Security;
-using Unyx.Application.Abstractions.Services;
 using Unyx.Application.Features.Auth.DTOs;
+using Unyx.Application.Interfaces.Security;
+using Unyx.Application.Interfaces.Services;
 using Unyx.Application.Persistence.Read;
 using Unyx.Domain.Entities;
 

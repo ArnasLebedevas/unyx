@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Unyx.Application.Abstractions.Services;
+using Unyx.Application.Interfaces.Services;
 using Unyx.Application.Services;
 
 namespace Unyx.Application.Registrations;

@@ -3,8 +3,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Unyx.Application.Abstractions.Security;
 using Unyx.Application.Common.Settings;
+using Unyx.Application.Interfaces.Security;
 using Unyx.Domain.Entities;
 
 namespace Unyx.Infrastructure.Security;

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
-using Unyx.Application.Abstractions.Security;
 using Unyx.Application.Common.Exceptions;
 using Unyx.Application.Common.Settings;
+using Unyx.Application.Interfaces.Security;
 using Unyx.Application.Persistence.Read;
 using Unyx.Domain.Entities;
 

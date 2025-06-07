@@ -2,11 +2,11 @@
 using Microsoft.Extensions.Options;
 using System.Net.Mail;
 using System.Net;
-using Unyx.Application.Abstractions.Services;
 using Unyx.Application.Common.Email;
 using Unyx.Application.Common.Messages;
 using Unyx.Application.Common.Settings;
 using Unyx.Application.Common.Exceptions;
+using Unyx.Application.Interfaces.Services;
 
 namespace Unyx.Infrastructure.Services;
 

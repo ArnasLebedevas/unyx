@@ -1,6 +1,6 @@
 ﻿using Unyx.Application.Common.Email;
 
-namespace Unyx.Application.Abstractions.Services;
+namespace Unyx.Application.Interfaces.Services;
 
 public interface IEmailService
 {

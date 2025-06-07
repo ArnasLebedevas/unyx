@@ -1,5 +1,5 @@
-﻿using Unyx.Application.Abstractions.CQRS;
-using Unyx.Application.Features.Auth.DTOs;
+﻿using Unyx.Application.Features.Auth.DTOs;
+using Unyx.Application.Interfaces.CQRS;
 
 namespace Unyx.Application.Features.Auth.SignIn;
 

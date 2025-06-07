@@ -1,4 +1,4 @@
-﻿namespace Unyx.Application.Abstractions.Security;
+﻿namespace Unyx.Application.Interfaces.Security;
 
 public interface ISecurityTokenGenerator
 {

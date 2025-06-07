@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
 using System.Text.RegularExpressions;
-using Unyx.Application.Abstractions.Services;
 using Unyx.Application.Common.Enums;
 using Unyx.Application.Common.Messages;
+using Unyx.Application.Interfaces.Services;
 
 namespace Unyx.Infrastructure.Services;
 

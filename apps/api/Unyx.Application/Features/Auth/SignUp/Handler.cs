@@ -1,12 +1,12 @@
-﻿using Unyx.Application.Abstractions.CQRS;
-using Unyx.Application.Abstractions.Security;
-using Unyx.Application.Abstractions.Services;
-using Unyx.Application.Common.Messages;
+﻿using Unyx.Application.Common.Messages;
 using Unyx.Application.Common;
 using Unyx.Application.Persistence.Read;
 using Unyx.Application.Persistence;
 using Unyx.Application.Common.Errors;
 using Unyx.Application.Features.Auth.DTOs;
+using Unyx.Application.Interfaces.CQRS;
+using Unyx.Application.Interfaces.Services;
+using Unyx.Application.Interfaces.Security;
 
 namespace Unyx.Application.Features.Auth.SignUp;
 

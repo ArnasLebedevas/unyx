@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Unyx.Application.Abstractions.Security;
-using Unyx.Application.Abstractions.Services;
+using Unyx.Application.Interfaces.Security;
+using Unyx.Application.Interfaces.Services;
 using Unyx.Infrastructure.Security;
 using Unyx.Infrastructure.Services;
 

@@ -1,7 +1,7 @@
 ﻿using Unyx.Application.Features.Auth.DTOs;
 using Unyx.Domain.Entities;
 
-namespace Unyx.Application.Abstractions.Services;
+namespace Unyx.Application.Interfaces.Services;
 
 public interface IAuthService
 {

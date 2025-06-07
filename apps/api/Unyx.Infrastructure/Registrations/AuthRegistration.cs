@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Unyx.Application.Abstractions.Security;
 using Unyx.Application.Common.Messages;
 using Unyx.Application.Common.Settings;
+using Unyx.Application.Interfaces.Security;
 using Unyx.Domain.Entities;
 using Unyx.Infrastructure.Security;
 
