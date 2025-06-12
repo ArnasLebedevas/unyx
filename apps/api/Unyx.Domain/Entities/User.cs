@@ -15,8 +15,6 @@ public class User : BaseEntity
     public Subscription Subscription { get; set; }
 
     public bool IsEmailVerified { get; set; }
-    public string? VerificationCode { get; set; }
-    public DateTime? CodeExpiry { get; set; }
 
     public DateTime CreatedAt { get; set; }
     public DateTime? VerifiedAt { get; set; }

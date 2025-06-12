@@ -3,7 +3,7 @@ using Unyx.Domain.Entities;
 
 namespace Unyx.Application.Interfaces.Services;
 
-public interface IUserService
+internal interface IUserService
 {
     User CreateUser(CreateUserDto model);
 }

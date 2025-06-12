@@ -2,5 +2,5 @@
 
 public enum EmailTemplateType
 {
-    VerifyEmail
+    EmailVerification
 }

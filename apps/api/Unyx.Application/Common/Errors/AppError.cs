@@ -10,5 +10,5 @@ public sealed class AppError(ErrorType code, string message)
     public static AppError Validation(string message) => new(ErrorType.Validation, message);
     public static AppError Conflict(string message) => new(ErrorType.Conflict, message);
     public static AppError Email(string message) => new(ErrorType.Email, message);
-    public static AppError Unauthorized => new(ErrorType.Unauthorized, "Access denied.");
+    public static AppError Unauthorized(string message) => new(ErrorType.Unauthorized, message);
 }

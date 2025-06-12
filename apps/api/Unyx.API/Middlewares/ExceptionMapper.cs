@@ -18,9 +18,9 @@ public static class ExceptionMapper
                     valEx.Errors?.ToDictionary(error => error.Key, error => error.Value)
                 )
             ),
-            UnauthorizedAccessException => (
+            UnauthorizedAccessException unauthEx => (
                 StatusCodes.Status401Unauthorized,
-                Result<object>.FailureResult(AppError.Unauthorized, ErrorType.Unauthorized)
+                Result<object>.FailureResult(AppError.Unauthorized(unauthEx.Message), ErrorType.Unauthorized)
             ),
             NotFoundException notFoundEx => (
                 StatusCodes.Status404NotFound,
@@ -29,7 +29,11 @@ public static class ExceptionMapper
             EmailSendFailureException emailEx => (
                StatusCodes.Status502BadGateway,
                Result<object>.FailureResult(AppError.Email(emailEx.Message), ErrorType.Email)
-           ),
+            ),
+            InvalidTokenException tokenEx => (
+                StatusCodes.Status401Unauthorized,
+                Result<object>.FailureResult(AppError.Unauthorized(tokenEx.Message), ErrorType.Unauthorized)
+            ),
             _ => (
                 StatusCodes.Status500InternalServerError,
                 Result<object>.FailureResult(AppError.System, ErrorType.System)

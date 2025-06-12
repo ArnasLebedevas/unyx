@@ -10,6 +10,7 @@ public static class ConfigRegistration
     {
         services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
         services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+        services.Configure<FrontendSettings>(configuration.GetSection("FrontendSettings"));
 
         return services;
     }

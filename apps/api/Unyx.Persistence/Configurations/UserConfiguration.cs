@@ -30,9 +30,6 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(u => u.AvatarUrl)
             .HasMaxLength(512);
 
-        builder.Property(u => u.VerificationCode)
-            .HasMaxLength(10);
-
         builder.Property(u => u.IsEmailVerified)
             .HasDefaultValue(false);
 

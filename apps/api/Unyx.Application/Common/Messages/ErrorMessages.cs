@@ -9,4 +9,5 @@ public static class ErrorMessages
     public const string UnSupportedTemplate = "Unsupported email template type";
     public const string EmailServiceNetworkError = "Email service encountered a network issue.";
     public const string SeedingDatabaseError = "An error occurred while seeding the database.";
+    public const string InvalidEmailVerificationToken = "Token does not contain a valid user ID.";
 }

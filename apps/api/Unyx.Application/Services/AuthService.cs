@@ -8,7 +8,7 @@ using Unyx.Domain.Entities;
 
 namespace Unyx.Application.Services;
 
-public class AuthService(IUserReadRepository userReadRepository, IPasswordHasher<User> passwordHasher, IJwtService jwtService, IMapper mapper) : IAuthService
+internal class AuthService(IUserReadRepository userReadRepository, IPasswordHasher<User> passwordHasher, IAuthTokenService authTokenService, IMapper mapper) : IAuthService
 {
     public async Task<User?> ValidateUserCredentialsAsync(string email, string password)
     {
@@ -21,7 +21,7 @@ public class AuthService(IUserReadRepository userReadRepository, IPasswordHasher
     public AuthResponseDto CreateAuthResponse(User user, string refreshToken)
     {
         var response = mapper.Map<AuthResponseDto>(user);
-        response.Token = jwtService.GenerateToken(user);
+        response.Token = authTokenService.GenerateToken(user);
         response.RefreshToken = refreshToken;
         return response;
     }

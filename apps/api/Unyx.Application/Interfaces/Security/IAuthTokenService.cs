@@ -2,7 +2,7 @@
 
 namespace Unyx.Application.Interfaces.Security;
 
-public interface IJwtService
+public interface IAuthTokenService
 {
     string GenerateToken(User user);
 }

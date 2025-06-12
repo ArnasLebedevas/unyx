@@ -6,7 +6,7 @@ using Unyx.Domain.Entities;
 
 namespace Unyx.Application.Services;
 
-public class UserService(IPasswordHasher<User> passwordHasher, IMapper mapper) : IUserService
+internal class UserService(IPasswordHasher<User> passwordHasher, IMapper mapper) : IUserService
 {
     public User CreateUser(CreateUserDto model)
     {

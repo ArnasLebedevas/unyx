@@ -10,6 +10,8 @@ public static class ServiceRegistration
     {
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IEmailVerificationService, EmailVerificationService>();
+        services.AddScoped<IEmailVerificationLinkGenerator, EmailVerificationLinkGenerator>();
 
         return services;
     }

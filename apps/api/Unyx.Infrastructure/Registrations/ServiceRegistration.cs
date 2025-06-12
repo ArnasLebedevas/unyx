@@ -12,8 +12,12 @@ public static class ServiceRegistration
     {
         services.AddScoped<ISecurityTokenGenerator, SecurityTokenGenerator>();
         services.AddScoped<IRefreshTokenService, RefreshTokenService>();
+
         services.AddScoped<IEmailTemplateService, EmailTemplateService>();
         services.AddScoped<IEmailService, EmailService>();
+
+        services.AddScoped<IAuthTokenService, AuthTokenService>();
+        services.AddScoped<IEmailVerificationTokenService, EmailVerificationTokenService>();
 
         return services;
     }

@@ -19,7 +19,7 @@ public static class AuthRegistration
         var jwtSettings = configuration.GetSection("JwtSettings").Get<JwtSettings>() 
             ?? throw new InvalidOperationException(ErrorMessages.MissingJWT);
 
-        services.AddSingleton<IJwtService, JwtService>();
+        services.AddSingleton<ITokenService, TokenService>();
         services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
         services.AddAuthentication(options =>
         {

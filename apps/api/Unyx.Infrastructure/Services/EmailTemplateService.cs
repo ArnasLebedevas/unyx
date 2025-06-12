@@ -12,7 +12,7 @@ public class EmailTemplateService : IEmailTemplateService
     {
         var templateName = templateType.ToString();
         var assembly = Assembly.GetExecutingAssembly();
-        var resourceName = $"Unyx.Infrastructure.Emails.Templates.{templateName}.cshtml";
+        var resourceName = $"Unyx.Infrastructure.Email.Templates.{templateName}.cshtml";
 
         using var stream = assembly.GetManifestResourceStream(resourceName)
             ?? throw new FileNotFoundException($"Embedded email template '{templateName}' not found.");
@@ -33,7 +33,7 @@ public class EmailTemplateService : IEmailTemplateService
     {
         return templateType switch
         {
-            EmailTemplateType.VerifyEmail => "Verify Your Account",
+            EmailTemplateType.EmailVerification => "Verify Your Account",
             _ => throw new ArgumentOutOfRangeException(nameof(templateType), templateType, ErrorMessages.UnSupportedTemplate)
         };
     }
