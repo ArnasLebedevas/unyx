@@ -4,7 +4,7 @@ using Unyx.Application.Common;
 
 namespace Unyx.API.Middlewares;
 
-public static class ExceptionMapper
+internal static class ExceptionMapper
 {
     public static (int StatusCode, Result<object> Result) Map(Exception exception)
     {

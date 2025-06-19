@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Unyx.Persistence.Registrations;
 
-public static class DatabaseRegistration
+internal static class DatabaseRegistration
 {
     public static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
     {

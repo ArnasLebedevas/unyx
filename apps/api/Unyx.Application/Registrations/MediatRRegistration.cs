@@ -6,7 +6,7 @@ using Unyx.Application.Features.Auth.SignIn;
 
 namespace Unyx.Application.Registrations;
 
-public static class MediatRRegistration
+internal static class MediatRRegistration
 {
     public static IServiceCollection AddMediatRServices(this IServiceCollection services)
     {

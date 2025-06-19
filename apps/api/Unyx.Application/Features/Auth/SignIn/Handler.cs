@@ -9,11 +9,15 @@ using Unyx.Application.Interfaces.Security;
 
 namespace Unyx.Application.Features.Auth.SignIn;
 
-internal sealed class SignInHandler(IAuthService authService, IUnitOfWork unitOfWork, IRefreshTokenService refreshTokenService) : ICommandHandler<SignInCommand, AuthResponseDto>
+internal sealed class SignInHandler(
+    IAuthService authService,
+    IUnitOfWork unitOfWork,
+    IRefreshTokenService refreshTokenService,
+    IUserValidationService userValidationService) : ICommandHandler<SignInCommand, AuthResponseDto>
 {
     public async Task<Result<AuthResponseDto>> Handle(SignInCommand request, CancellationToken cancellationToken)
     {
-        var user = await authService.ValidateUserCredentialsAsync(request.Email, request.Password);
+        var user = await userValidationService.ValidateCredentialsAsync(request.Email, request.Password);
         if (user is null) return AppError.Validation(ErrorMessages.InvalidCredentials);
 
         var refreshToken = await refreshTokenService.GetRefreshTokenAsync(user.Id);

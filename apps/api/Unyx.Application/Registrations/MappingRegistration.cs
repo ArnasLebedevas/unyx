@@ -3,7 +3,7 @@ using Unyx.Application.Features.Auth.SignUp;
 
 namespace Unyx.Application.Registrations;
 
-public static class MappingRegistration
+internal static class MappingRegistration
 {
     public static IServiceCollection AddMappingServices(this IServiceCollection services)
     {

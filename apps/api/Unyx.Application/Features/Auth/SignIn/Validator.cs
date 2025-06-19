@@ -3,7 +3,7 @@ using Unyx.Application.Common.Messages;
 
 namespace Unyx.Application.Features.Auth.SignIn;
 
-public class SignInValidator : AbstractValidator<SignInCommand>
+internal class SignInValidator : AbstractValidator<SignInCommand>
 {
     public SignInValidator()
     {

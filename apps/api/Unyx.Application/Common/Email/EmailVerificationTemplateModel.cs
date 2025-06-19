@@ -2,7 +2,7 @@
 
 namespace Unyx.Application.Common.Email;
 
-public class EmailVerificationTemplateModel : EmailTemplateModel
+internal class EmailVerificationTemplateModel : EmailTemplateModel
 {
     public required string VerificationLink { get; set; }
 

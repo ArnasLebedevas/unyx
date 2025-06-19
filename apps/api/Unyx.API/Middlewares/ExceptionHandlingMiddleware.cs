@@ -2,7 +2,7 @@
 
 namespace Unyx.API.Middlewares;
 
-public class ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)
+internal class ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)
 {
     private static readonly JsonSerializerOptions CachedJsonSerializerOptions = new()
     {

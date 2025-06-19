@@ -10,6 +10,8 @@ public static class ServiceRegistration
 {
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
+        services.AddScoped<IPasswordValidationService, PasswordValidationService>();
+
         services.AddScoped<ISecurityTokenGenerator, SecurityTokenGenerator>();
         services.AddScoped<IRefreshTokenService, RefreshTokenService>();
 

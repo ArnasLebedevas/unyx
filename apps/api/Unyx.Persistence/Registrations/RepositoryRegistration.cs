@@ -8,7 +8,7 @@ using Unyx.Persistence.Repositories;
 
 namespace Unyx.Persistence.Registrations;
 
-public static class RepositoryRegistration
+internal static class RepositoryRegistration
 {
     public static IServiceCollection AddRepositories(this IServiceCollection services)
     {
