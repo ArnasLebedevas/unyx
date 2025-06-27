@@ -1,6 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Unyx.Application.Interfaces.Services;
-using Unyx.Application.Services;
+using Unyx.Application.Interfaces.Services.Auth;
+using Unyx.Application.Interfaces.Services.Email;
+using Unyx.Application.Interfaces.Services.Users;
+using Unyx.Application.Services.Email;
+using Unyx.Application.Services.Users;
 
 namespace Unyx.Application.Registrations;
 

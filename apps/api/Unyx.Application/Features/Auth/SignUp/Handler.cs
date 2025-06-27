@@ -5,8 +5,9 @@ using Unyx.Application.Persistence;
 using Unyx.Application.Common.Errors;
 using Unyx.Application.Features.Auth.DTOs;
 using Unyx.Application.Interfaces.CQRS;
-using Unyx.Application.Interfaces.Services;
-using Unyx.Application.Interfaces.Security;
+using Unyx.Application.Interfaces.Services.Auth;
+using Unyx.Application.Interfaces.Services.Users;
+using Unyx.Application.Interfaces.Services.Auth.Tokens;
 
 namespace Unyx.Application.Features.Auth.SignUp;
 

@@ -4,8 +4,9 @@ using Unyx.Application.Common.Errors;
 using Unyx.Application.Common.Messages;
 using Unyx.Application.Features.Auth.DTOs;
 using Unyx.Application.Interfaces.CQRS;
-using Unyx.Application.Interfaces.Services;
-using Unyx.Application.Interfaces.Security;
+using Unyx.Application.Interfaces.Services.Auth;
+using Unyx.Application.Interfaces.Services.Auth.Tokens;
+using Unyx.Application.Interfaces.Services.Users;
 
 namespace Unyx.Application.Features.Auth.SignIn;
 

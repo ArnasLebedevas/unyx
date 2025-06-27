@@ -6,9 +6,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Unyx.Application.Common.Messages;
 using Unyx.Application.Common.Settings;
-using Unyx.Application.Interfaces.Security;
+using Unyx.Application.Interfaces.Services.Auth.Tokens;
 using Unyx.Domain.Entities;
-using Unyx.Infrastructure.Security;
+using Unyx.Infrastructure.Auth.Tokens;
 
 namespace Unyx.Infrastructure.Registrations;
 

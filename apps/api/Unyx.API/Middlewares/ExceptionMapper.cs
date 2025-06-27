@@ -34,6 +34,10 @@ internal static class ExceptionMapper
                 StatusCodes.Status401Unauthorized,
                 Result<object>.FailureResult(AppError.Unauthorized(tokenEx.Message), ErrorType.Unauthorized)
             ),
+            UnsupportedAuthProviderException unsupportedEx => (
+               StatusCodes.Status400BadRequest,
+               Result<object>.FailureResult(AppError.UnsupportedProvider(unsupportedEx.Message), ErrorType.UnsupportedProvider)
+           ),
             _ => (
                 StatusCodes.Status500InternalServerError,
                 Result<object>.FailureResult(AppError.System, ErrorType.System)

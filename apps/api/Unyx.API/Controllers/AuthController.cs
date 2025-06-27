@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Unyx.Application.Features.Auth.GoogleSignIn;
+using Unyx.Application.Features.Auth.External;
 using Unyx.Application.Features.Auth.SignIn;
 using Unyx.Application.Features.Auth.SignUp;
 using Unyx.Application.Features.Auth.ValidateRefreshToken;
@@ -16,8 +16,8 @@ public class AuthController(IMediator mediator) : BaseApiController
     [HttpPost("sign-in")]
     public async Task<IActionResult> SignIn([FromBody] SignInCommand command) => HandleResponse(await mediator.Send(command));
 
-    [HttpPost("google-sign-in")]
-    public async Task<IActionResult> GoogleSignIn([FromBody] GoogleSignInCommand command) => HandleResponse(await mediator.Send(command));
+    [HttpPost("external-sign-in")]
+    public async Task<IActionResult> ExternalSignIn([FromBody] ExternalSignInCommand command) => HandleResponse(await mediator.Send(command));
 
     [HttpPost("refresh-token")]
     public async Task<IActionResult> ValidateRefreshToken([FromBody] ValidateRefreshTokenCommand command) => HandleResponse(await mediator.Send(command));

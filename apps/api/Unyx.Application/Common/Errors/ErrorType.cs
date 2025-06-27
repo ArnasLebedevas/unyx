@@ -9,5 +9,6 @@ public enum ErrorType
     Unauthorized,
     Conflict,
     System,
-    Email
+    Email,
+    UnsupportedProvider,
 }
