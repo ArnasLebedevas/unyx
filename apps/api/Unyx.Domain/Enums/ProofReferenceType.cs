@@ -2,9 +2,9 @@
 
 public enum ProofReferenceType
 {
-    Url,
-    File,
-    OAuth,
-    Other,
-    None
+    None = 0,
+    Url = 1,
+    File = 2,
+    OAuth = 3,
+    Other = 4,
 }

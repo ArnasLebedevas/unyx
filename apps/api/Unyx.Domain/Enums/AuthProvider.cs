@@ -2,6 +2,6 @@
 
 public enum AuthProvider
 {
-    Local,
-    Google,
+    Local = 0,
+    Google = 1,
 }

@@ -2,8 +2,8 @@
 
 public enum UsernameVerificationMethod
 {
-    None,
-    Email,
-    ExternalLink,
-    OAuth,
+    None = 0,
+    Email = 1,
+    ExternalLink = 2,
+    OAuth = 3,
 }

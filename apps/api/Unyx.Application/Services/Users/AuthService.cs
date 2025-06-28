@@ -11,8 +11,10 @@ internal sealed class AuthService(IAuthTokenService authTokenService, IMapper ma
     public AuthResponseDto CreateAuthResponse(User user, string refreshToken)
     {
         var response = mapper.Map<AuthResponseDto>(user);
-        response.Token = authTokenService.GenerateToken(user);
-        response.RefreshToken = refreshToken;
-        return response;
+        return response with
+        {
+            Token = authTokenService.GenerateToken(user),
+            RefreshToken = refreshToken
+        };
     }
 }

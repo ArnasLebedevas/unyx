@@ -47,13 +47,12 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.HasMany(u => u.Usernames)
             .WithOne()
-            .HasForeignKey("UserId")
+            .HasForeignKey(x => x.UserId)
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasMany(u => u.LinkedAccounts)
-            .WithOne()
-            .HasForeignKey("UserId")
-            .OnDelete(DeleteBehavior.Cascade);
+            .WithOne(x => x.User)
+            .HasForeignKey(x => x.UserId);
 
         builder.HasOne(u => u.Role)
             .WithMany(r => r.Users)

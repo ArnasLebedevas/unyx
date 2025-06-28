@@ -2,7 +2,7 @@
 
 public enum UsernameSource
 {
-    Manual,
-    OAuth,
-    Game
+    Manual = 0,
+    OAuth = 1,
+    Game = 2,
 }

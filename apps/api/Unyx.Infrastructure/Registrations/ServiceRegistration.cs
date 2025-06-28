@@ -5,7 +5,6 @@ using Unyx.Application.Interfaces.Services.Email;
 using Unyx.Infrastructure.Auth.External;
 using Unyx.Infrastructure.Auth.Tokens;
 using Unyx.Infrastructure.Services.Email;
-using Unyx.Infrastructure.Services.Users;
 
 namespace Unyx.Infrastructure.Registrations;
 

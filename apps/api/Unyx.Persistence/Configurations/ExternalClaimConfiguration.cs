@@ -46,6 +46,6 @@ internal sealed class ExternalClaimConfiguration : IEntityTypeConfiguration<Exte
         builder.HasOne(ec => ec.User)
             .WithMany(u => u.LinkedAccounts)
             .HasForeignKey(ec => ec.UserId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }
